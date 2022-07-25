@@ -1,1 +1,1 @@
-https://valeryzhvalevski.github.io/travel3/index
+https://valeryzhvalevski.github.io/travel3/
