@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+   }
+
+.header {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    width: 390px;
+height: 251px;
+left: 0px;
+top: 0px;
+    background: url(./wall1.png),
+    linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
+    }
+
+    .menu {
+ 
+    display: flex;
+    justify-content: space-between;
+    padding-top: 43px;
+    padding-left: 16;
+    padding-right: 16px;
+        }
+.log {
+  margin-left: 16px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.logo{height: 31px;}
+
+.hamburger-menu{color: white;}
+#menu__toggle {
+  opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 20px;
+  left: 350px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search {
+    width: 360px;
+height: 48px;
+left: 15px;
+top: 142px;
+
+background: rgba(255, 255, 255, 0.7);
+border-radius: 16px;
+align-items: center;
+/*padding: 0px 9px 0px 17px;*/
+margin-top: 97px;
+margin-left: 15px;
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.what {
+    align-items: center;
+    width: 226.01px;
+height: 11.12px;
+left: 31.55px;
+top: 158.17px;
+
+font-family: 'Aleo';
+font-style: italic;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+margin-left: 16.55px;
+color: #F2785C;
+}
+
+
+.st {
+    margin-right: 9px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 10px;
+    
+    width: 92px;
+    height: 30px;
+    left: 274px;
+    top: 151px;
+    
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+}
+.start {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+   
+    align-items: center;
+    
+    color: #FFFFFF;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    text-decoration: none;
+}
+
+
+
+.steps{
+    width: 360px;
+height: 153px;
+  margin-left: 15px;
+  margin-top: 20px;
+    font-size: 25px;
+    line-height: 30px;
+    font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #F2785C;
+}
+
+.steps__items{
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Aleo';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+/* identical to box height */
+
+
+color: #0D606F;
+
+}
+
+.steps__header{
+    margin-left: 60px;
+}
+
+
+.steps__item_1_icon {
+    width: 70px;
+height: 70px;
+left: calc(50% - 70px/2);
+top: calc(50% - 70px/2);
+
+background: #F2785C;
+border-radius: 16px;
+}
+
+
+.steps__item2{
+    width: 70px;
+    height: 70px;
+    left: calc(50% - 70px/2);
+    top: calc(50% - 70px/2);
+    background: #F2785C;
+    border-radius: 16px;
+ }
+
+
+.steps__item3{
+    width: 70px;
+    height: 70px;
+    left: calc(50% - 70px/2);
+    top: calc(50% - 70px/2);
+    background: #F2785C;
+    border-radius: 16px;
+}
+
+
+
+.popular {
+    width: 176px;
+margin-left: 107px;
+font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #F2785C;
+}
+
+
+.sim-slider {
+border-radius: 16px;
+  max-width: 360px;
+  margin-left: 15px;
+  
+  background: #FFFFFF;
+
+}
+
+/* General styles */
+.sim-slider {
+   
+  position: relative;
+}
+
+.sim-slider-list {
+     
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+}
+
+.sim-slider-element {
+    border-radius: 16px;
+  width: 100%;
+  transition: opacity 1s ease-in;
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  display: block;
+
+}
+
+/* Navigation item styles */
+div.sim-slider-arrow-left,
+div.sim-slider-arrow-right {
+  width: 22px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.6;
+  z-index: 4;
+  color: #F2785C;
+}
+
+div.sim-slider-arrow-left {
+  left: 10px;
+  top: 40%;
+  display: block;
+  
+
+  background:  url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-left.png") no-repeat;
+}
+
+div.sim-slider-arrow-right {
+  right: 10px;
+  top: 40%;
+  display: block;
+  background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-right.png") no-repeat;
+}
+
+div.sim-slider-arrow-left:hover {
+  opacity: 1.0;
+}
+
+div.sim-slider-arrow-right:hover {
+  opacity: 1.0;
+}
+
+div.sim-slider-dots {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  text-align: center;
+  color: #F2785C;
+}
+
+span.sim-dot {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  padding: 0;
+  display: inline-block;
+  background-color: #BBB;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    width: 140.96px;
+height: 33.65px;
+
+display: flex;
+    justify-content: space-between
+    margin-right: 32px;
+}
+
+
+.footer__icons {display: flex;
+    justify-content: space-between;}
+
+
+.footer__icons1 {display: flex;
+    justify-content: space-between;}
+
+
+
+       /* align-items: center; в строчку ровно*/
